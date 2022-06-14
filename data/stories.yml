@@ -1,0 +1,86 @@
+version: "3.1"
+
+stories:
+
+# - story: main interview
+  # steps:
+  # - intent: intro_chitchat
+  # - action: utter_chitchat1
+  # - intent: intro_various1
+  # - action: utter_intro_various
+  # - intent: experience
+  # - action: utter_experience_pos
+  # - intent: work_description
+  # - action: utter_work_description
+  # - intent: negotiations
+  # - action: utter_negotiations
+  # - intent: candidate_questions
+  # - action: utter_candidate_questions
+  # - intent: end_greeting
+  # - action: utter_end_greeting
+  
+# - story: detailed work description
+  # steps:
+  # - intent: intro_chitchat
+  # - action: utter_chitchat1
+  # - intent: intro_various1
+  # - action: utter_intro_various
+  # - intent: experience
+  # - action: utter_experience_pos
+  # - intent: work_description
+  # - action: utter_work_description
+  # - intent: work_description_pos_cont
+  # - action: utter_experience_pos_cont
+  # - intent: negotiations
+  # - action: utter_negotiations
+  # - intent: candidate_questions
+  # - action: utter_candidate_questions
+  # - intent: end_greeting
+  # - action: utter_end_greeting
+  
+- story: detailed work description 2
+  steps:
+  - intent: intro_chitchat
+  - action: utter_chitchat1
+  - intent: intro_various1
+  - action: utter_intro_various
+  - intent: experience
+  - action: utter_experience_pos
+  - intent: experience_cont
+  - action: utter_experience_pos_cont
+  - intent: experience_contx2
+  - action: utter_experience_pos_contx2
+  - intent: work_description
+  - action: utter_work_description_uni_availability
+  - intent: work_description_cont
+  - action: utter_work_description_weekend_availability
+  - intent: work_description_contx2
+  - action: utter_work_description_weekend_availability_cont
+  - action: utter_start_date_negotiation
+  - intent: salary_negotiation
+  - action: utter_salary_negotiation
+  - intent: salary_negotiation_cont
+  - action: utter_salary_negotiation_cont
+  - intent: salary_negotiation_contx2
+  - action: utter_salary_negotiation_contx2
+  - intent: candidate_questions
+  - action: utter_candidate_questions
+  - intent: end_greeting
+  - action: utter_end_greeting
+  
+# - story: negative interviewer
+  # steps:
+  # - intent: intro_chitchat
+  # - action: utter_chitchat1
+  # - intent: intro_various1
+  # - action: utter_intro_various
+  # - intent: experience
+  # - action: utter_experience_neg
+  # - intent: work_description
+  # - action: utter_work_description
+  # - intent: negotiations
+  # - action: utter_negotiations
+  # - intent: candidate_questions
+  # - action: utter_candidate_questions
+  # - intent: end_greeting
+  # - action: utter_end_greeting

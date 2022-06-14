@@ -1,0 +1,175 @@
+version: "3.1"
+
+nlu:
+
+- intent: intro_chitchat
+  examples: |
+    - Bună
+    - Bună ziua
+    - Bună ziua!
+    - Bună ziua.
+    - Salut
+    - Salutare
+    - Hello!
+    - Salut, ce mai faci?
+    - Bună, ce mai faci?
+    - Bună, cum esti?
+    - Salutare, cum ești?
+    - Hello, ce faci?
+    - Bunăziua.
+    - Salt!
+    - Bnă.
+
+- intent: intro_various1
+  examples: |
+    - Da, am ajuns foarte ușor, m-a îndrumat portarul.
+    - Am ajuns usor, m-au ghidat cei de la intrare.
+    - Am ajuns destul de usor.
+    - M-au directionat de la intrare, v-am gasit usor.
+    - M-au directional cei de la intrare, am ajuns destul de usor.
+    - Am ajuns cu metroul
+    - Am venit cu metroul
+    - Am venit cu masina personala
+    - Am zis sa iau metroul, pentru ca este mai rapid
+
+- intent: intro_various2
+  examples: |
+    - Vremea este destul de buna afara, am ajuns rapid.
+    - Vremea nu este foarte buna.
+    - Este destul de innorat afara.
+    - Este foarte insorit afara.
+
+- intent: experience
+  examples: |
+    - Nu am un motiv foarte bine definit de ce aș vrea să plec
+    - Nu vad o directie prea bine definita in care firma o sa mearga spre viitor
+    - Nu am un motiv foarte bine definit de ce as vrea sa plec
+    - Mi se pare în principal că ne-am cam plafonat și nu mai văd o direcție prea bine definită în care firma o să meargă spre viitor, și de aceea...
+    - Nu văd o direcție prea bine definită în care firma o să meargă spre viitor.
+    - nu am un motiv foarte bine definit de ce as vrea sa plec
+    - Nu pot spune ca am un motiv principal pentru care vreau sa renunt la firma curenta
+    - mi se pare in principal ca ne-am cam plafonat si nu mai vad o directie prea bine definita in care firma o sa mearga spre viitor, si de aceea...
+    - in principal, motivul ar fi ca nu vad o directie clara a firmei
+    - Motivul principal ar fi ca nu am posibilitati de a ma dezvolta in continuare in domeniu
+
+- intent: experience_cont
+  examples: |
+    - Sigur! Noi am proiectat câteva obiecte pentru diverși clienți, care deja au fost integrate, de exemplu jucarii pentru copii, o manuta 3D pentru copiii care nu aveau mana
+    - De asemenea, am mai făcut câteva jucării pentru copii
+    - Am mai facut cateva jucarii din plastic pentru copii
+    - Am lucrat la proiectarea unor obiecte pentru diversi clienti, de exemplu jucarii de plastic
+    - O mânuță 3D pentru copiii care nu aveau... mână, care au suferit accidente...
+
+- intent: experience_contx2
+  examples: |
+    - Cele pe PWM, pe plastic, de la reis, care erau de diferite mărimi, dar de asemenea am lucrat și cu cele cu rășină.
+    - In principal am lucrat cu imprimante pe plastic, de tip PWM
+    - Cu imprimante de tip pwm lucram cel mai mult, insa am lucrat si cu rasina
+    - In mare parte lucram cu imprimante pe plastic, dar si cu cele cu rasina
+    - Am lucrat mai putin cu imprimantele cu rasina si mai mult cu cele pe plastic
+    - Majoritatea timpului lucram cu imprimante pe plastic, tip PWM, dar am lucrat un pic si cu cele cu rasina
+    - De obicei lucram pe plastic, dar am lucrat un pic si cu rasina.
+
+- intent: work_description
+  examples: |
+    - Mai puțin, dar eu spun că tot mă pricep și principiile sunt în mare parte aceleași.
+    - In principal lucram mai putin cu rasina, dar nu cred ca este foarte mare diferenta intre variante
+    - Lucram cu rasina mai putin, insa principiile ar trebui sa fie similare
+    - Mai putin lucram cu rasina, dar cred ca ma pricep, deoarece modul de lucru este asemanator
+    - Cred ca sunt destul de similare cele cu rasina si cele cu plastic
+    - Sunt aproximativ la fel cele doua tipuri de imprimante
+    - Cu imprimantele cu rasina am lucrat mai putin, dar cred ca sunt destul de similare cu cele pe plastic.
+    - As zice ca sunt destul de asemanatoare, cred ca as putea invata repede sa folosesc imprimantele pe rasina.
+
+- intent: work_description_cont
+  examples: |
+    - Destul de mult timp, dar în contextul actual nu cred că o să țină... trebuie să țineți cont de program, deoarece masterul începe de la ora 16, sau chiar de la ora 18 în unele zile, deci disponibilitatea mea este full-time.
+    - Activitate imi ia destul de mult timp, dar nu cred ca este o problema, sunt disponibil pentru un program complet de 8 ore
+    - Nu cred ca ar trebui sa fie o problema masterul, chiar daca ocupa destul de mult timp. In general orele sunt puse dupa ora 16 sau 18.
+    - Imi ocupa destul timp, dar nu se suprapune cu programul full-time de la munca.
+    - Masterul nu imi ocupa chiar asa de mult timp, deci as fi disponibil full-time
+    - Nu este chiar asa solicitant master-ul, deci cred ca as fi disponibil full-time.
+    - Chiar daca masterul ocupa ceva timp, orele sunt puse pe seara, deci pot lucra full-time.
+    - Orele la master incep pe seara, dupa 16 sau 18, sunt disponibil full-time pentru job.
+
+- intent: work_description_contx2
+  examples: |
+    - În principiu da, atâta timp cât este anunțat din timp, probabil că spontan, poate câteodată da, câteodată nu, depinde de...
+    - Daca sunt anuntat cu o săptămână înainte...
+    - Da, înțeleg, că în unele cazuri e nevoie... in principiu da, daca sunt anuntat din timp
+    - Pot lucra in week-end daca sunt anuntat din timp, sa stiu sa nu imi pun planuri in acele zile.
+    - In principiu, daca sunt anuntat din timp, imi pot face timp pentru lucru in weekend
+    - Se poate, daca sunt anuntat din timp.
+
+- intent: salary_negotiation
+  examples: |
+    - Cel mai probabil a doua zi. Trebuie să vorbesc la firma și să vedem cum au și ei proiectele, și...
+    - As fi dispobil cat de curand, eventual a doua zi.
+    - Pai cred ca as putea incepe a doua zi.
+    - Trebuie sa discut si la firma sa vad cum au colegii proiectele, dar in principiu a doua zi.
+    - In principiu pot incepe cat mai repede posibil, a doua zi.
+    - Se poate sa incep chiar si de a doua zi, daca cei de la firma nu au multe proiecte in derulare
+    - Depinde si de cat de multe proiecte au colegii de la firma, dar cred ca pot incepe a doua zi.
+
+- intent: salary_negotiation_cont
+  examples: |
+    - Prețul meu ar fi cam de 3000 de lei... net.
+    - Ma gandeam la suma de 3000 de lei net.
+    - In principiu, as dori 3000 de lei.
+    - Salariul net dorit ar fi de aproximativ 3000 de lei.
+    - Suma la care ma gandesc ar fi de 3000 de lei net.
+    - Suma cu care as fi de acord ar fi 3000 de lei net.
+    - Pretul minim este de 3000 de lei net.
+
+- intent: salary_negotiation_contx2
+  examples: |
+    - Ii doresc pe toti pe carte de munca.
+    - In general sunt mai prevazator si ma gandesc in viitor, asa ca i-as dori pe toti pe carte de munca.
+    - Da, as vrea ca toti sa fie pe carte de munca.
+    - As vrea ca acesta sa fie salariul complet, trecut pe carte de munca.
+    - Salariul as vrea sa fie complet pe carte de munca.
+    - Da, vreau tot salariul pe carte de munca.
+
+- intent: candidate_questions
+  examples: |
+    - Dacă puteți să îmi vorbiți puțin despre proiectele dumneavoastră?
+    - Imi puteti descrie mai bine proiectele dumneavoastra?
+    - Cu ce proiecte va ocupati?
+    - Am înțeles, nu am intrebari.
+    - Ce tipuri de proiecte aveti in desfasurare?
+
+- intent: end_greeting
+  examples: |
+    - Mersi frumos, mi-a părut bine.
+    - La revedere!
+    - Mulțumesc si eu, la revedere!
+    - Si mie mi-a părut bine.
+    - O zi bună!
+    - O zibună!
+    - Larevedere!
+    - Mi-a părut bine, pe curând!
+    - Salut, pe curând.
+
+- intent: affirm
+  examples: |
+    - da
+    - intr-adevar
+    - desigur
+    - pare in regula
+    - corect
+    - sigur
+    - cu siguranta
+    - mai mult ca sigur
+    - normal ca da
+    - normal
+
+- intent: deny
+  examples: |
+    - nu
+    - niciodata
+    - nu cred
+    - nici chiar
+    - de niciun fel
+    - nu chiar
+    - in niciun caz
+    - nu este chiar asa

@@ -1,0 +1,219 @@
+version: "3.1"
+
+intents:
+  - intro_chitchat
+  - intro_various1
+  - intro_various2
+  - experience
+  - experience_cont
+  - experience_contx2
+  - work_description
+  - work_description_cont
+  - work_description_contx2
+  - salary_negotiation
+  - salary_negotiation_cont
+  - salary_negotiation_contx2
+  - candidate_questions
+  - end_greeting
+  - affirm
+  - deny
+
+entities:
+- reason_to_leave_1
+- experience_1
+- experience_2
+- work_description_1
+- work_description_2
+- start_date_negotiations
+- salary_negotiations
+- candidate_questions_1
+
+slots:
+  reason_to_leave_1:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: reason_to_leave_1
+  experience_1:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: experience_1
+  experience_2:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: experience_2
+  work_description_1:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: work_description_1
+  work_description_2:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: work_description_2
+  start_date_negotiations:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: start_date_negotiations
+  salary_negotiations:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: salary_negotiations
+  candidate_questions_1:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: candidate_questions_1
+
+forms:
+  interview_form:
+    ignored_intents:
+    - intro_chitchat
+    required_slots:
+        - reason_to_leave_1
+        - experience_1
+        - experience_2
+        - work_description_1
+        - work_description_2
+        - start_date_negotiations
+        - salary_negotiations
+        - candidate_questions_1
+
+responses:
+  utter_greet:
+  - text: "Bună"
+  - text: "Bună ziua"
+  - text: "Salut"
+  - text: "Salutare"
+  - text: "Hello"
+  - text: "Salut, ce mai faci?"
+  - text: "Bună, ce mai faci?"
+  - text: "Bună, cum esti?"
+  - text: "Salutare, cum ești?"
+  - text: "Hello, ce faci?"
+  
+  utter_chitchat1:
+  - text: "Salutare. Mă bucur că ai putut să ajungi. Cum ne-ai găsit? Ne-ai găsit ușor?"
+  - text: "Salut. Ai venit cu metroul sau cu mașina?"
+  - text: "Salut, ma bucur ca ai venit. Ai ajuns repede?"
+  - text: "Salut, ne-ai gasit usor? Cam cat a durat drumul pana la noi?"
+  - text: "Salutare. Ma bucur ca ai venit. Te-ai grabit sa ajungi la noi?"
+  - text: "Salut, cum a fost drumul pana la noi?"
+  
+  utter_chitchat2:
+  - text: "Cum este vremea afara?"
+  - text: "Ma bucur ca ai ajuns exact la timp."
+
+  utter_intro_various:
+  - text: "Foarte bine. M-am uitat pe CV-ul tău și chiar mi s-a părut că te-ai potrivi pentru postul nostru, însă înainte de asta, te-aș întreba, poate că sună brutal, de ce vrei să pleci de la locul actual de muncă?"
+  - text: "Din CV pare ca ai multe dintre abilitatile pe care noi le cautam, insa as dori mai intai sa stiu, de ce doresti sa vii la firma noastra"
+  - text: "Bun. Pare ca te potrivesti in foarte mare masura postului pe care noi incercam sa il ocupam; de ce te-ai gandit sa iti schimbi locul de munca?"
+
+  utter_experience_pos:
+  - text: "Ok, zi-mi, că am văzut că și acolo făceai ceva proiectare, dă-mi exemple privind... de proiecte, ce ai făcut ... ce n-ai făcut... nu știu, ca să pot să mă conving."
+  - text: "Proiectele din CV-ul tau par interesante, imi poti da ceva mai multe detalii despre ele?" 
+  - text: "Imi poti descrie mai detaliat cu ce te ocupai la celalalt loc de munca? Proiectele sunt destul de interesante, la prima vedere"
+  
+  utter_experience_pos_cont:
+  - text: "Ce tip de imprimante foloseati?"
+  
+  utter_experience_pos_contx2:
+  - text: "Pe rășină ați lucrat, mai mult, mai puțin? De ce te întreb? Pentru că în mediul profesional în care activam noi, în mediul industrial, mai mult se pune accentul pe rășină."
+  
+  utter_experience_neg:
+  - text: "Nu imi este foarte clar din CV, poti sa imi descrii experienta ta de pana acum in acest domeniu?"
+  - text: "CV-ul nu imi spune foarte multe, poti sa imi detaliezi partea de experienta profesionala?"
+  - text: "Foarte bine. Nu imi dau seama foarte bine din CV, imi poti spune cate ceva despre experienta ta pe domeniul acesta?"
+  
+  utter_work_description:
+  - text: "Ok. Legat de disponibilitatea ta, văd că ești încă student la masterat. Cât de mult timp îți ocupă acest... această activitate?"  
+  
+  utter_work_description_uni_availability:
+  - text: "Ok. Legat de disponibilitatea ta, văd că ești încă student la masterat. Cât de mult timp îți ocupă acest... această activitate?"  
+
+  utter_work_description_weekend_availability:
+  - text: "Ok! Legat de posibilitatea de a lucra și în weekend... Știi, la noi uneori clienții vin, dar vin în ultimul moment și vor să finalizam foarte repede lucrările... Ai disponibilitate, poți să iți aloci week-end-ul, nu poți? E important pentru noi să știm constrângerile..."
+
+  utter_work_description_weekend_availability_cont:
+  - text: "Da... Nu vrem să facem un obicei din asta, dar iți dai seama, că de cele mai multe ori, clientul zice - \"Mi s-a confirmat un contract, am aceste ... materii produse de făcut ... pentru poimâine\", deci uneori termenul de 1 săptămână nu prea poate."
+  - text: "Sigur, doar cazuri excepționale, deci nu e vorba de o chestie de rutină curentă. Bun."
+
+  utter_start_date_negotiation:
+  - text: "Bun. Legat de contractul tău actual, presupunând că noi ne hotăram, și îți confirmăm - \"Azi 13\". În cât timp ai putea fi disponibil pentru angajare?"
+
+  utter_salary_negotiation:
+  - text: "Am rugămintea să te interesezi... de ce... pentru că poate în contract ai nevoieee... adică prin contract e prevăzută o perioadă de grație, în sensul că nu poți pleca de azi pe mâine. Nu știu, e de văzut în contractul tău, te rog să verifici la tine la firma. Ok... Păi cam atât. Mulțumesc frumos... Sunt mai mulți candidați și... Nu ascund acest lucru... Vom discuta; Legat de bani... Stai că am uitat exact acest aspect. Cât îți dorești pentru un program de 8 ore?"
+
+  utter_salary_negotiation_cont:
+  - text: "3000 de lei net... În general, la noi în firma lucrăm cu parte fixă, parte variabilă, de ce? Pentru că și noi depindem de proiecte, și altfel ar însemna să ne asumăm niște costuri pe care de fapt ulterior să nu putem să le acoperim și toată lumea să fie nefericită. Mi-am notat acest lucru, mă voi gândi împreună cu colegii și vom face, în măsura în care vei fi selectat, vom transmite și o ofertă pe care să discutăm, în care într-adevăr se vă regăsi o parte fixă și o parte variabilă. Știu că poate nu e cel mai fericit moment, oricum iți dorești 3000 de lei net, din ce considerent? Sau îl vrei pe tot pe carte de muncă?"
+
+  utter_salary_negotiation_contx2:
+  - text: "Ok... Poate vom începe cu o altă sumă la început, urmând ca în timp să mărim, să transformăm partea variabilă în parte fixă. Mersi frumos. Dacă tu ai întrebări."
+
+
+# old action utterances
+  utter_negotiations:
+  - text: "Am rugămintea să te interesezi... de ce... pentru că poate în contract ai nevoie... adică prin contract e prevăzută o perioadă de grație, în sensul că nu poți pleca de azi pe mâine. Nu știu, e de văzut în contractul tău, te rog să verifici la tine la firma. Ok... Păi cam atât. Mulțumesc frumos... Ăăăă... vom analiza... Sunt mai mulți candidați și... Nu ascund acest lucru... Vom discuta; Legat de bani... Stai că am uitat exact acest aspect. Cât îți dorești pentru un program de 8 ore?"
+  - text: "Pentru credit?"
+  
+  utter_candidate_questions:
+  - text: "Noi în general lucrăm cu firme mari, fie firme mari din ceea ce înseamnă eventimente și marketing, fie avem niște parteneriate cu Renault, cu Continental, și atunci acolo primim de multe ori comenzi și avem un gen de continuitate, în zona de media, unele proiecte adică... Sunt perioade în care sunt proiecte mai multe, perioade în care sunt mai puține, și practic căutăm să echilibram cele două zone."
+
+  utter_end_greeting:
+  - text: "Mersi frumos, mi-a părut bine."
+  - text: "La revedere!"
+  - text: "Mulțumesc si eu, la revedere!"
+  - text: "Și mie mi-a părut bine."
+  - text: "O zi bună!"
+  - text: "La revedere."
+  - text: "Mi-a părut bine, pe curând!"
+  - text: "Salut, pe curând."
+  
+  utter_ask_interview_form_reason_to_leave_1:
+  - text: "M-am uitat pe CV-ul tău și chiar mi s-a părut că te-ai potrivi pentru postul nostru, însă înainte de asta, te-aș întreba, poate că sună brutal, de ce vrei să pleci de la locul actual de muncă?"
+  - text: "Ai putea să îmi spui de ce te-ai hotărât să pleci de la locul de muncă curent?"
+  - text: "Care ar fi motivele pentru care te-ai decis sa îți schimbi locul de muncă?"
+  - text: "Ai vreun motiv anume pentru care vrei sa schimbi jobul?"
+  
+  utter_ask_interview_form_experience_1:
+  - text: "Ok, zi-mi, că am văzut că și acolo făceai ceva proiectare, dă-mi exemple privind... de proiecte, ce ai făcut, ce n-ai făcut... nu știu, ca să pot să mă conving."
+  - text: "Poți să îmi dai un exemplu de proiect mai important, la care ai contribuit?"
+  - text: "Aș vrea, dacă se poate, să îmi spui câte ceva despre proiectele la care ai lucrat."
+  
+  utter_ask_interview_form_experience_2:
+  - text: "Cu ce tip de tehnologie lucrați mai mult la locul de muncă?"
+  
+  utter_ask_interview_form_work_description_1:
+  - text: "Legat de disponibilitatea ta, văd că ești încă student la masterat. Cât de mult timp îți ocupă acest... această activitate?"
+  - text: "Ce disponibilitate ai avea, în cazul în care hotărâm ca ai fi acceptat?"
+  - text: "Ai fi disponibil pentru program full-time sau part-time?"
+  
+  utter_ask_interview_form_work_description_2:
+  - text: "Ok! Legat de posibilitatea de a lucra și în weekend... Știi, la noi uneori clienții vin, dar vin în ultimul moment și vor să finalizam foarte repede lucrările... Ai disponibilitate, poți să iți aloci week-end-ul, nu poți? E important pentru noi să știm constrângerile..."
+  - text: "În cazurile în care ar fi neapărat nevoie, ai fi dispus sa lucrezi și în weekend?"
+  - text: "Poți lucra și în weekend, dacă este necesar?"
+  
+  utter_ask_interview_form_start_date_negotiations:
+  - text: "Bun. Legat de contractul tău actual, presupunând că noi ne hotăram, și îți confirmăm \"Azi 13\". În cât timp ai putea fi disponibil pentru angajare?"
+  - text: "Dacă ne hotărâm să începem o colaborare, în cât timp ai fi disponibil pentru a te angaja?"
+  - text: "În cazul în care este acceptat, când ai putea începe?"
+  
+  utter_ask_interview_form_salary_negotiations:
+  - text: "Legat de bani... Stai că am uitat exact acest aspect. Ăăăă... Cât îți dorești pentru un program de 8 ore?"
+  - text: "Ce salariu ți-ai dori pentru un program full-time?"
+  - text: "Ce așteptări salariale ai?"
+  - text: "Legat de salariu, te-ai gândit la o sumă anume?"
+  
+  utter_ask_interview_form_candidate_questions_1:
+  - text: "Mersi frumos. Dacă tu ai întrebări."
+  - text: "Mulțumesc pentru răspunsuri. Ai întrebări pentru mine?"
+  - text: "Mulțumesc, ai întrebări?"
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
