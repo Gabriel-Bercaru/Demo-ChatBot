@@ -4,6 +4,17 @@ intents:
   - intro_chitchat
   - intro_various1
   - intro_various2
+  
+  - intro_fit_reason
+  - is_currently_working
+  - is_working_affirm
+  - is_working_affirm_technology
+  - is_working_affirm_tenure
+  - is_working_affirm_team_structure
+  - is_working_affirm_clients_feedback
+  - finished_education
+  - education_assigned_time
+  
   - experience
   - experience_cont
   - experience_contx2
@@ -114,6 +125,80 @@ responses:
   - text: "Din CV pare ca ai multe dintre abilitatile pe care noi le cautam, insa as dori mai intai sa stiu, de ce doresti sa vii la firma noastra"
   - text: "Bun. Pare ca te potrivesti in foarte mare masura postului pe care noi incercam sa il ocupam; de ce te-ai gandit sa iti schimbi locul de munca?"
 
+  utter_intro_why_chosen_us:
+  - text: "O sa te intreb direct: de ce te-ai gandit sa lucrezi cu noi?"
+  - text: "Pentru inceput, ce te-a atras la compania noastra?"
+  - text: "Ai putea sa imi spui ce anume ti-a atras atentia asupra companiei noastre?"
+  - text: "Care ar fi motivele pentru care vrei sa lucrezi cu noi?"
+  - text: "Ti-a atras ceva atentia in mod special la compania noastra?"
+
+  utter_intro_fit_reason:
+  - text: "De ce crezi ca esti un candidat bun pentru postul nostru?"
+  - text: "Care ar fi motivele pentru care te-am alege pe tine si nu alt candidat?"
+  - text: "Pentru ce te-am alege pe tine in detrimentul altul candidat pe acelasi post?"
+  - text: "Crezi ca ai ceva in plus fata de celelalte persoane care au aplicat la jobul acesta?"
+  - text: "Care ar fi punctele tale tari, comparativ cu restul candidatilor?"
+  - text: "De ce te-am angaja sau alege pe tine, in locul celorlalti candidati?"
+
+  utter_is_currently_working:
+  - text: "In prezent, lucrezi?"
+  - text: "In momentul de fata, esti angajat?"
+  - text: "Lucrezi in prezent?"
+  - text: "Ai experienta de lucru anterioara, lucrezi in prezent?"
+  - text: "Acum esti sub contract cu vreo alta companie?"
+  - text: "Ai vreun contract cu alta firma in momentul de fata?"
+
+  utter_is_working_affirm_work_description:
+  - text: "Poti sa imi dai exemplu de cateva proiecte pe care le-ai avut la locul de munca?"
+  - text: "Cam ce proiecte ati avut pana acum la locul de munca?"
+  - text: "Ce faci la locul actual de munca?"
+  - text: "Poti sa imi detaliezi cu ce te ocupi la locul de munca curent?"
+  - text: "Cam cu ce te ocupi la locul de munca curent?"
+
+  utter_is_working_affirm_technology:
+  - text: "Ce fel de tehnologie folositi la munca?"
+  - text: "Cu ce tip de materiale lucrati la locul curent de munca?"
+  - text: "Ce tip de imprimante utilizati la munca?"
+  - text: "Cu ce fel de tehnologii lucrati cel mai mult?"
+
+  utter_is_working_affirm_tenure:
+  - text: "De cat timp lucrezi la actuala companie?"
+  - text: "Cam de cand te-ai angajat la locul curent de munca?"
+  - text: "Ce vechime ai la firma curenta?"
+  - text: "Cam cat de mult ai stat pana acum la compania la care lucrezi?"
+  - text: "Esti angajat de mult la locul curent? De cat timp?"
+
+  utter_is_working_affirm_team_structure:
+  - text: "Legat de interactiune, lucu in echipa... Cati sunteti voi acolo? Lucrezi in echipa sau lucrezi individual?"
+  - text: "La locul curent de munca, faci parte din vreo echipa? Sau lucrezi individual?"
+  - text: "Cam care este structura echipei in care lucrezi?"
+  - text: "Lucrati in echipa la jobul curent? Ce structura are echipa?"
+  - text: "La jobul tau, cam cati suntenti in echipa? Sau lucrezi individual?"
+  - text: "Pe partea de lucru in echipa cum stai? Lucrati multi in cadrul echipei de la locul curent de munca?"
+
+  utter_is_working_affirm_clients_feedback:
+  - text: "Feedbackuri de la clienti ati avut? Experiente placute, vreun exemplu?"
+  - text: "Clientii v-au comunicat vreodata cat de multumiti au fost de serviciile voastre?"
+  - text: "Ai avut vreun feedback de la clienti despre care sa fii mandru?"
+  - text: "Au fost multumiti clientii de produsele pe care le-ati livrat?"
+  - text: "Crezi ca destinatarii produselor create de voi au fost multumiti de produse?"
+  - text: "Cam cat de mult crezi ca au fost clientii multumiti de servicii?"
+  - text: "Aveti feedback de la lume? Crezi ca au fost fericiti cu produsele livrate de voi? Mi-ai putea da un exemplu in acest sens?"
+
+  utter_finished_education:
+  - text: "Ai terminat studiile?"
+  - text: "Inca esti la facultate, sau ai terminat studiile?"
+  - text: "Ai absolvit facultatea recent?"
+  - text: "Inca studiezi, nu-i asa?"
+  - text: "Esti inca student, corect?"
+  
+  utter_education_assigned_time:
+  - text: "Si, iti ocupa mult timp studiile?"
+  - text: "Iti mananca mult timp?"
+  - text: "Aloci mult timp activitatilor de la facultate?"
+  - text: "Cam cat timp iti ocupa aceasta activitate?"
+  - text: "Banuiesc ca ai nevoie de mult timp pentru studii, nu-i asa?"
+
   utter_experience_pos:
   - text: "Ok, zi-mi, că am văzut că și acolo făceai ceva proiectare, dă-mi exemple privind... de proiecte, ce ai făcut ... ce n-ai făcut... nu știu, ca să pot să mă conving."
   - text: "Proiectele din CV-ul tau par interesante, imi poti da ceva mai multe detalii despre ele?" 
@@ -145,16 +230,29 @@ responses:
 
   utter_start_date_negotiation:
   - text: "Bun. Legat de contractul tău actual, presupunând că noi ne hotăram, și îți confirmăm - \"Azi 13\". În cât timp ai putea fi disponibil pentru angajare?"
+  - text: "Bun. Legat de jobul actual - ai constrangeri? E un contract cu limitari sau poti pleca? Am vrea sa stim cat de repede poate veni candidatul ales sa lucreze cu noi."
+  - text: "In regula. In cazul in care ai fi selectat, ai idee cand ai putea incepe? Intreb si daca ai vreunele limitari impuse de contractul tau actual."
+  - text: "Legat de jobul tau curent... Noi am dat anuntul acum trei saptamani si ok... procesul de recrutare ureaza ceva, insa in momentul in care alegem, vrem sa stim de cand persoana poate sa vina sa lucreze cu noi. Te limiteaza cumva contractul curent in acest sens?"
+  - text: "Am inteles. Contractul curent in cat timp ar putea fi incheiat, daca ne hotaram sa mergem mai departe cu tine?"
 
   utter_salary_negotiation:
   - text: "Am rugămintea să te interesezi... de ce... pentru că poate în contract ai nevoieee... adică prin contract e prevăzută o perioadă de grație, în sensul că nu poți pleca de azi pe mâine. Nu știu, e de văzut în contractul tău, te rog să verifici la tine la firma. Ok... Păi cam atât. Mulțumesc frumos... Sunt mai mulți candidați și... Nu ascund acest lucru... Vom discuta; Legat de bani... Stai că am uitat exact acest aspect. Cât îți dorești pentru un program de 8 ore?"
+  - text: "Ok. Legat de partea salariala... Nu o sa te intreb cati bani castigi dincolo, ca nu e corect, insa ce asteptari ai?"
+  - text: "Pentru salariu, te-ai gandit la o suma anume? Pentru un program de 8 ore?"
+  - text: "Pentru un program full-time, care ar fi suma la care te-ai gandit?"
+  - text: "La ce suma te astepti, pentru salariu? Ai vreo suma anume in minte?"
+  - text: "Ce asteptari salariale ai de la acest loc de munca? Te-ai gandit la acest aspect?"
 
   utter_salary_negotiation_cont:
   - text: "3000 de lei net... În general, la noi în firma lucrăm cu parte fixă, parte variabilă, de ce? Pentru că și noi depindem de proiecte, și altfel ar însemna să ne asumăm niște costuri pe care de fapt ulterior să nu putem să le acoperim și toată lumea să fie nefericită. Mi-am notat acest lucru, mă voi gândi împreună cu colegii și vom face, în măsura în care vei fi selectat, vom transmite și o ofertă pe care să discutăm, în care într-adevăr se vă regăsi o parte fixă și o parte variabilă. Știu că poate nu e cel mai fericit moment, oricum iți dorești 3000 de lei net, din ce considerent? Sau îl vrei pe tot pe carte de muncă?"
+  - text: "Am inteles... La noi mdelul este cu parte fixa, parte variabila, pentru ca iti dai seama, ca banii pentru salarii si pentru astea, sunt generati din proiectele cu clientii. Daca identificam proiectele, executam proiecte si clientul este multumit, si se intampla lucruri, automat, partea variabila poate fi de ajutor. Iarasi, mhm... suntem o firma mica, antreprenoriala, iti doresti totul pe cartea de munca?"
+  - text: "Este un salariu cam mare... La salariul respectiv, si taxele pentru noi sunt mari. Iti doresti totul pe carte de munca?"
+  - text: "Noi in general lucram cu parte fixa si parte variabila... In functie de proiectele pe care le avem si le indeplinim, partea variabila poate deveni mai consistenta. Ai dori tot salariul pe carte de munca?"
 
   utter_salary_negotiation_contx2:
   - text: "Ok... Poate vom începe cu o altă sumă la început, urmând ca în timp să mărim, să transformăm partea variabilă în parte fixă. Mersi frumos. Dacă tu ai întrebări."
-
+  - text: "Am inteles. Ne vom gandi si noi la salariu, si vom face o oferta. Ai intrebari pentru noi?"
+  - text: "Am notat asta. Multumesc pentru discutie. Ai intrebari pentru noi?"
 
 # old action utterances
   utter_negotiations:
@@ -163,16 +261,18 @@ responses:
   
   utter_candidate_questions:
   - text: "Noi în general lucrăm cu firme mari, fie firme mari din ceea ce înseamnă eventimente și marketing, fie avem niște parteneriate cu Renault, cu Continental, și atunci acolo primim de multe ori comenzi și avem un gen de continuitate, în zona de media, unele proiecte adică... Sunt perioade în care sunt proiecte mai multe, perioade în care sunt mai puține, și practic căutăm să echilibram cele două zone."
+  - text: "Majoritatea clientilor sunt firme multinationale, care au achizitii repetitive de la noi, in general avem un contract-cadru... Si uneori fac comenzi explicite pe zona asta de 3D, alteori, cum iti dadeam eu exemplu, a trebuit sa organizam team-building-uri, e cumva in curtea noastra... sa venim cu o propunere de concept pe care, de cele mai multe ori, ei o accepta sau ne dau feedback. Spuneam despre promotionale, pentru ca avantajul imprimantelor 3D este ca poti veni de fiecare data cu ceva nou. In pliante... erau pliante de la un capat la altul. Acum puteam avea conceptul - capsunica, conceptul nu stiu care... Plus ca solicitarile sunt si pentru pachete-clienti; personalizate... mhm... nu stiu ce au facut colegii nostri... avem inclusiv niste suporturi de pahar, care sunt personalizate cu brand-ul nostru; si aici, e util inclusiv sa vezi ce lucrui noi apar, astfel incat sa ne gandim cum le putem integra in conceptele si in produsele noastre."
 
   utter_end_greeting:
   - text: "Mersi frumos, mi-a părut bine."
   - text: "La revedere!"
   - text: "Mulțumesc si eu, la revedere!"
   - text: "Și mie mi-a părut bine."
-  - text: "O zi bună!"
+  - text: "Multumesc pentru discutie. O zi bună!"
   - text: "La revedere."
   - text: "Mi-a părut bine, pe curând!"
   - text: "Salut, pe curând."
+  - text: "Multumesc, o zi buna."
   
   utter_ask_interview_form_reason_to_leave_1:
   - text: "M-am uitat pe CV-ul tău și chiar mi s-a părut că te-ai potrivi pentru postul nostru, însă înainte de asta, te-aș întreba, poate că sună brutal, de ce vrei să pleci de la locul actual de muncă?"
@@ -213,7 +313,10 @@ responses:
   - text: "Mersi frumos. Dacă tu ai întrebări."
   - text: "Mulțumesc pentru răspunsuri. Ai întrebări pentru mine?"
   - text: "Mulțumesc, ai întrebări?"
-  
+
+actions:
+  - action_session_start
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

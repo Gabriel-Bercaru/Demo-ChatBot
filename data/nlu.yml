@@ -39,6 +39,82 @@ nlu:
     - Este destul de innorat afara.
     - Este foarte insorit afara.
 
+- intent: intro_fit_reason
+  examples: |
+    - Ce m-a facut cel mai mult, asa, am vazut pe internet poze cu activitatile voastre, si mi se pare foarte interesant si am vrut sa iau si eu parte
+    - M-am gandit ca firma dumneavoastra este unul dintre liderii domeniului in care se activeaza si as dori sa contribui si eu la activitatile de aici
+    - Am aplicat la voi la recomandarea unui prieten, care a lucrat in trecut cu voi si mi-a povestit multe lucruri interesante
+    - Cred ca firma voastra este un loc foarte bun pentru dezvoltare profesionala, unde poti invata multe, deoarece proiectele despre care am auzit par foarte complexe si interesante
+    - Motivul principal pentru care am aplicat la aceasta companie ar fi ca am auzit de la prieteni cateva descrieri de proiecte foarte interesante si doresc sa contribui si eu la dezvoltarea lor
+    - Din cateva postari pe internet, am inteles ca activitatile voastre sunt foarte interesante si as vrea si eu sa contribui la proiectele respective.
+
+- intent: is_currently_working
+  examples: |
+    - Cred ca am dobandit suficienta experienta in domeniu, din moment ce lucrez de 2 ani cu imprimante 3D
+    - Cred ca am dobandit suficienta experienta in domeniu, din moment ce lucrez de 5 ani cu imprimante 3D
+    - Cred ca am dobandit suficienta experienta in domeniu, din moment ce lucrez de 1 an cu imprimante 3D
+    - Am participat la destul de multe proiecte de modelare, trebuie sa fi capatat experienta necesara pentru sarcini mai dificile
+    - Consider ca spre deosebire de multe alte persoane, ies in evidenta prin atentia la detalii in timp ce muncesc
+    - As spune ca un avantaj pe care il am fata de ceilalti este sarguinta de care dau dovata in rezolvarea task-urilor
+    - Cred ca spre deosebire de altii, sunt o persoana care invata destul de repede si se poate adapta, chiar si cand nu am lucrat suficient cu o anumita tehnologie
+    - Cred ca ceilalti nu dispun de aceeasi dedicare si capacitate de efort de care dispun eu.
+    - Cred ca principala mea calitate este faptul ca sunt perseverent si invat lucruri noi foarte rapid.
+
+- intent: is_working_affirm_technology
+  examples: |
+    - Lucrez in prezent la o companie de proiectare 3D
+    - In prezent sunt angajat ca inginer de imprimante 3d
+    - Lucrez ca proiectant 3D, cu imprimante 3D
+    - Lucrez, da, la o companie care se ocupa cu creare de modele 3D folosind imprimante 3d
+    - Sunt inginer de proiectare 3d, lucrez la configrarea imprimantelor pentru a realiza diverse modele 3d
+    - lucrez in momentul de fata, cu imprimante 3D
+
+- intent: is_working_affirm_tenure
+  examples: |
+    - Momentan am lucrat in cea mai mare parte cu cele de PWM, cu PLA in principal, dar si unele proiecte cu rasina
+    - Am lucrat si cu rasina, dar mai putin, in principal se folosea PWM, PLA, TPU, nylon
+    - In mare parte lucram cu cele pe plastic, PWM, dar am lucrat un pic si cu rasina
+    - In majoritatea cazurilor, am folosit imprimantele cu PLA sau PWM
+    - Cateodata mai foloseam si imprimantele pe rasina, dar in majoritatea cazurilor, cele pe plastic
+    - Cel mai mult am folosit imprimante pe PWM, PLA, dar uneori si imprimante pe rasina.
+
+- intent: is_working_affirm_team_structure
+  examples: |
+    - Da, lucrez de aproximativ 2 ani la locul curent de munca
+    - Sunt la jobul curent de putin timp, aproape jumatate de an
+    - Peste 1 luna fac 1 an de zile de cand lucrez pe postul de acum
+    - Lucrez de putin peste 3 ani
+    - M-am angajat la jobul curent cand am terminat facultatea, acum doi ani
+    - Sunt de ceva timp la locul curent de munca, aproape 5 ani
+    - Nu lucrez de foarte mult timp, m-am angajat acum doua luni.
+
+- intent: is_working_affirm_clients_feedback
+  examples: |
+    - In principal, in echipa suntem eu si inca doua persoane
+    - Lucrez mai mult individual, dar sunt coleg cu inca 2 persoane
+    - Lucrez in echipa, suntem in total cam 4 oameni
+    - Depinde de proiect, cateodata lucrez mai mult cu colegii, 3 persoane, dintre care 1 este lider, alteori lucrez mai mult individual
+    - Sunt intr-o echipa cu inca 2 colegi si un lider de echipa
+    - In total suntem 4 oameni in echipa.
+
+- intent: finished_education
+  examples: |
+    - In general lumea este foarte uimita de partea cu litofane si de acele jucarii flexibile, clientii nu cred ca sunt facute dintr-o singura bucata
+    - Partea cu litofane suprinde placut cel mai mult lumea, apoi jucariile flexibile facute dintr-o singura bucata, asa ne-au transmis majoritatea
+    - Cei mai multi clienti se mira cand le aratam acele jucarii flexibile care sunt realizate dintr-o singura piesa, e surprinzator pentru ei
+    - Lumea este in general multimita de produsele livrate de noi, in special de partea cu litofane
+    - Majoritatea persoanelor care au comandat de la noi sunt surprinse placut atunci cand le aratam acele jucarii flexibile facute dintr-o bucata.
+
+- intent: education_assigned_time
+  examples: |
+    - Momentan sunt la master, anul doi.
+    - Momentan sunt student la masterat, in primul an.
+    - Sunt student la master, anul unu.
+    - Inca sunt la facultate, in primul an de masterat.
+    - Am inceput recent masteratul, sunt student in primul an.
+    - Mai am putin si termin studiile de master, sunt anul 2.
+    - Urmeaza sa termin masterul in curand, sunt anul 2
+
 - intent: experience
   examples: |
     - Nu am un motiv foarte bine definit de ce aș vrea să plec
