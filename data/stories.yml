@@ -1,62 +1,97 @@
 version: "3.1"
 
 stories:
-
-# - story: main interview
-  # steps:
-  # - intent: intro_chitchat
-  # - action: utter_chitchat1
-  # - intent: intro_various1
-  # - action: utter_intro_various
-  # - intent: experience
-  # - action: utter_experience_pos
-  # - intent: work_description
-  # - action: utter_work_description
-  # - intent: negotiations
-  # - action: utter_negotiations
-  # - intent: candidate_questions
-  # - action: utter_candidate_questions
-  # - intent: end_greeting
-  # - action: utter_end_greeting
   
 - story: detailed work description (previous experience)
   steps:
-  - action: action_session_start
-  - intent: intro_chitchat
-  - action: utter_chitchat1
-  - intent: intro_various1
-  - action: utter_intro_why_chosen_us
-  - intent: intro_fit_reason
-  - action: utter_intro_fit_reason
-  - intent: is_currently_working
-  - action: utter_is_currently_working
-  - intent: affirm
-  - action: utter_is_working_affirm_work_description
-  - intent: is_working_affirm_technology
-  - action: utter_is_working_affirm_technology
-  - intent: is_working_affirm_tenure
-  - action: utter_is_working_affirm_tenure
-  - intent: is_working_affirm_team_structure
-  - action: utter_is_working_affirm_team_structure
-  - intent: is_working_affirm_clients_feedback
-  - action: utter_is_working_affirm_clients_feedback
-  - intent: finished_education
-  - action: utter_finished_education
-  - intent: education_assigned_time
-  - action: utter_education_assigned_time
-  - intent: work_description_cont
-  - action: utter_start_date_negotiation
-  - intent: salary_negotiation
-  - action: utter_salary_negotiation
-  - intent: salary_negotiation_cont
-  - action: utter_salary_negotiation_cont
-  - intent: salary_negotiation_contx2
-  - action: utter_salary_negotiation_contx2
-  - intent: candidate_questions
-  - action: utter_candidate_questions
-  - intent: end_greeting
-  - action: utter_end_greeting
+  # action: action_session_start                        #  CB    > Salut, bine ai venit la training-ul pentru interviuri
+  - intent: intro_greeting                              #  User  > Salut!
+  - action: utter_chitchat1                             #  CB    > Ma bucur ca ai venit, ne-ai gasit usor?
+  - intent: intro_chitchat1                             #  User  > Da, am ajuns repede, m-a indrumat portarul.
+  - action: utter_intro_various                         #  CB    > Foarte bine. M-am uitat pe CV-ul tau, de ce vrei sa pleci?
+  - intent: intro_reason_for_leaving                    #  User  > Nu am o directie clara de dezvoltare la firma actuala.
+  - action: utter_intro_reason_for_choosing_us          #  CB    > Bun. Pare ca te potrivesti postului nostru, de ce ne-ai ales pe noi?
+  - intent: intro_reason_for_choosing_us                #  User  > Am vazut niste poze pe internet cu ce faceti voi aici
+  - action: utter_intro_fit_reason                      #  CB    > De ce crezi ca te potrivesti postului pe care il cautam noi?
+  - intent: intro_fit_reason                            #  User  > Cred ca am suficienta experienta plus dorinta de munca
+  - action: utter_is_currently_working                  #* CB    > In prezent lucrezi?
+  - intent: is_currently_working                        #  User  > Lucrez in prezent la o companie de proiectare 3D
+  - action: utter_is_working_affirm_work_description    #  CB    > Ce faci la locul actual de munca?
+  - intent: is_working_affirm_description               #  User  > Tot felul de chestii din plastic: jucarii, aaaa... chiar am facut de intai martie martisoare... din plastic
+  - action: utter_is_working_affirm_technology          #  CB    > Cu ce tehnologii lucrati cel mai mult?
+  - intent: is_working_affirm_technology                #  User  > Momentan cel mai mult am lucrat cu imprimantele pe PWM
+  - action: utter_is_working_affirm_tenure              #  CB    > De cat timp lucrezi la actuala companie?
+  - intent: is_working_affirm_tenure                    #  User  > Lucrez de putin peste 3 ani
+  - action: utter_is_working_affirm_team_structure      #  CB    > Legat de interactiune, lucru in echipa... Cati sunteti acolo?
+  - intent: is_working_affirm_team_structure            #  User  > Echipa are 5 persoane plus un team leader
+  - action: utter_is_working_affirm_clients_feedback    #* CB    > Feedback-uri de la clienti ati avut? Experiente placute, neplacute?
+  - intent: is_working_affirm_clients_feedback          #  User  > Lumea este multumita de produsele livrate de noi, mai ales litofane
+  - action: utter_finished_education                    #* CB    > Ai terminat studiile?
+  - intent: not_finished_education                      #  User  > Momentan sunt la master, anul 2.
+  - action: utter_education_assigned_time               #  CB    > Cat timp iti ocupa aceasta activitate?
+  - intent: education_assigned_time                     #  User  > Destul de mult timp, dar nu trebuie sa tineti cont, orele sunt seara.
+  - action: utter_work_weekend_availability             #* CB    > Legat de lucrul in weekend, ai fi disponibil, atunci cand e nevoie?
+  - intent: work_affirm_weekend_availability            #  User  > In principiu da, daca sunt anuntat din timp
+  - action: utter_work_weekend_availability_cont        #  CB    > Iti dai seama, nu vrem sa facem un obicei din asta
+  - action: utter_start_date_negotiation                #* CB    > Bun. Legat de contractul tau actual, cand ai putea incepe?(sooner/later)
+  - intent: work_start_date_soon                        #  User  > Cel mai probabil a doua zi, sa vad cum au si ei proiectele
+  - action: utter_start_date_soon                       #  CB    > S-ar putea sa nu fie posibil asa repede, trebuie sa verifici
+  - action: utter_salary_negotiation                    #* CB    > Te-ai gandit la vreo suma anume pentru un program de 8 ore?
+  - intent: salary_negotiation_high                     #  User  > Salariul meu ar fi cam de 3000 de lei net
+  - action: utter_salary_negotiation_high               #  CB    > 3000 de lei net... noi lucram cu parte fixa/variabila. Carte de munca?
+  - intent: salary_negotiation_high_workbook            #  User  > Da, tot pe carte de munca.
+  - action: utter_salary_negotiation_high_conclusion    #  CB    > Poate incepem cu alta suma, dupa care urmeaza sa marim
+  - action: utter_does_candidate_have_questions         #* CB    > Mersi de discutie, tu ai intrebari?
+  - intent: candidate_has_questions                     #  User  > Imi puteti spune cate ceva despre proiectele voastre?
+  - action: utter_answer_candidate_questions            #*  CB    > Noi lucram cu firme mari, incercam sa gasim proiecte
+  - intent: confirm                                     #  User  > Am inteles, este clar, multumesc!
+  - action: utter_end_greeting                          #  CB    > Multumesc de discutie, la revedere.
   
+- story: detailed work description (previous experience)
+  steps:
+  # not mentioned here: CB > Salut, bine ai venit la training-ul pentru interviuri
+  - intent: intro_greeting                              #  User  > Salut!
+  - action: utter_chitchat1                             #  CB    > Ma bucur ca ai venit, ne-ai gasit usor?
+  - intent: intro_chitchat1                             #  User  > Da, am ajuns repede, m-a indrumat portarul.
+  - action: utter_intro_various                         #  CB    > Foarte bine. M-am uitat pe CV-ul tau, de ce vrei sa pleci?
+  - intent: intro_reason_for_leaving                    #  User  > Nu am o directie clara de dezvoltare la firma actuala.
+  - action: utter_intro_reason_for_choosing_us          #  CB    > Bun. Pare ca te potrivesti postului nostru, de ce ne-ai ales pe noi?
+  - intent: intro_reason_for_choosing_us                #  User  > Am vazut niste poze pe internet cu ce faceti voi aici
+  - action: utter_intro_fit_reason                      #  CB    > De ce crezi ca te potrivesti postului pe care il cautam noi?
+  - intent: intro_fit_reason                            #  User  > Cred ca am suficienta experienta plus dorinta de munca
+  - action: utter_is_currently_working                  #* CB    > In prezent lucrezi?
+  - intent: is_currently_working                        #  User  > Lucrez in prezent la o companie de proiectare 3D
+  - action: utter_is_working_affirm_work_description    #  CB    > Ce faci la locul actual de munca?
+  - intent: is_working_affirm_description               #  User  > Tot felul de chestii din plastic: jucarii, aaaa... chiar am facut de intai martie martisoare... din plastic
+  - action: utter_is_working_affirm_technology          #  CB    > Cu ce tehnologii lucrati cel mai mult?
+  - intent: is_working_affirm_technology                #  User  > Momentan cel mai mult am lucrat cu imprimantele pe PWM
+  - action: utter_is_working_affirm_tenure              #  CB    > De cat timp lucrezi la actuala companie?
+  - intent: is_working_affirm_tenure                    #  User  > Lucrez de putin peste 3 ani
+  - action: utter_is_working_affirm_team_structure      #  CB    > Legat de interactiune, lucru in echipa... Cati sunteti acolo?
+  - intent: is_working_affirm_team_structure            #  User  > Echipa are 5 persoane plus un team leader
+  - action: utter_is_working_affirm_clients_feedback    #* CB    > Feedback-uri de la clienti ati avut? Experiente placute, neplacute?
+  - intent: is_working_affirm_clients_feedback          #  User  > Lumea este multumita de produsele livrate de noi, mai ales litofane
+  - action: utter_finished_education                    #* CB    > Ai terminat studiile?
+  - intent: not_finished_education                      #  User  > Momentan sunt la master, anul 2.
+  - action: utter_education_assigned_time               #  CB    > Cat timp iti ocupa aceasta activitate?
+  - intent: education_assigned_time                     #  User  > Destul de mult timp, dar nu trebuie sa tineti cont, orele sunt seara.
+  - action: utter_work_weekend_availability             #* CB    > Legat de lucrul in weekend, ai fi disponibil, atunci cand e nevoie?
+  - intent: work_affirm_weekend_availability            #  User  > In principiu da, daca sunt anuntat din timp
+  - action: utter_work_weekend_availability_cont        #  CB    > Iti dai seama, nu vrem sa facem un obicei din asta
+  - action: utter_start_date_negotiation                #* CB    > Bun. Legat de contractul tau actual, cand ai putea incepe?(sooner/later)
+  - intent: work_start_date_soon                        #  User  > Cel mai probabil a doua zi, sa vad cum au si ei proiectele
+  - action: utter_start_date_soon                       #  CB    > S-ar putea sa nu fie posibil asa repede, trebuie sa verifici
+  - action: utter_salary_negotiation                    #* CB    > Te-ai gandit la vreo suma anume pentru un program de 8 ore?
+  - intent: salary_negotiation_high                     #  User  > Salariul meu ar fi cam de 3000 de lei net
+  - action: utter_salary_negotiation_high               #  CB    > 3000 de lei net... noi lucram cu parte fixa/variabila. Carte de munca?
+  - intent: salary_negotiation_high_workbook            #  User  > Da, tot pe carte de munca.
+  - action: utter_salary_negotiation_high_conclusion    #  CB    > Poate incepem cu alta suma, dupa care urmeaza sa marim
+  - action: utter_does_candidate_have_questions         #* CB    > Mersi de discutie, tu ai intrebari?
+  - intent: candidate_has_questions                     #  User  > Imi puteti spune cate ceva despre proiectele voastre?
+  - action: utter_answer_candidate_questions            #* CB   > Noi lucram cu firme mari, incercam sa gasim proiecte
+  - intent: end_greeting                                #  User  > Multumesc, mi-a parut bine.
+  - action: utter_end_greeting                          #  CB    > Multumesc de discutie, la revedere.
+
   
   # - action: utter_intro_various
   # - intent: experience
@@ -98,36 +133,35 @@ stories:
   # - intent: end_greeting
   # - action: utter_end_greeting
 
-- story: detailed work description 2
-  steps:
-  - action: action_session_start
-  - intent: intro_chitchat
-  - action: utter_chitchat1
-  - intent: intro_various1
-  - action: utter_intro_various
-  - intent: experience
-  - action: utter_experience_pos
-  - intent: experience_cont
-  - action: utter_experience_pos_cont
-  - intent: experience_contx2
-  - action: utter_experience_pos_contx2
-  - intent: work_description
-  - action: utter_work_description_uni_availability
-  - intent: work_description_cont
-  - action: utter_work_description_weekend_availability
-  - intent: work_description_contx2
-  - action: utter_work_description_weekend_availability_cont
-  - action: utter_start_date_negotiation
-  - intent: salary_negotiation
-  - action: utter_salary_negotiation
-  - intent: salary_negotiation_cont
-  - action: utter_salary_negotiation_cont
-  - intent: salary_negotiation_contx2
-  - action: utter_salary_negotiation_contx2
-  - intent: candidate_questions
-  - action: utter_candidate_questions
-  - intent: end_greeting
-  - action: utter_end_greeting
+# - story: detailed work description 2     #####
+  # steps:
+  # - intent: intro_chitchat
+  # - action: utter_chitchat1
+  # - intent: intro_various1
+  # - action: utter_intro_various
+  # - intent: experience
+  # - action: utter_experience_pos
+  # - intent: experience_cont
+  # - action: utter_experience_pos_cont
+  # - intent: experience_contx2
+  # - action: utter_experience_pos_contx2
+  # - intent: work_description
+  # - action: utter_work_description_uni_availability
+  # - intent: work_description_cont
+  # - action: utter_work_description_weekend_availability
+  # - intent: work_description_contx2
+  # - action: utter_work_description_weekend_availability_cont
+  # - action: utter_start_date_negotiation
+  # - intent: salary_negotiation
+  # - action: utter_salary_negotiation
+  # - intent: salary_negotiation_cont
+  # - action: utter_salary_negotiation_cont
+  # - intent: salary_negotiation_contx2
+  # - action: utter_salary_negotiation_contx2
+  # - intent: candidate_questions
+  # - action: utter_candidate_questions
+  # - intent: end_greeting
+  # - action: utter_end_greeting
   
 # - story: negative interviewer
   # steps:

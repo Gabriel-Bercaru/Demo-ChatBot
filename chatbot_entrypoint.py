@@ -2,9 +2,10 @@ import requests
 
 SENDER = 'Me'
 END_MESSAGE = 'bye'
+ENDPOINT = 'http://127.0.0.1:5002/webhooks/rest/webhook'
 
-def send_message(sender, message):
-    return requests.post('http://127.0.0.1:5002/webhooks/rest/webhook', json={'sender': sender, 'message': message})
+def send_message(sender, message, lowercase=True):
+    return requests.post(ENDPOINT, json={'sender': sender, 'message': message.lower() if lowercase else message})
 
 def print_bot_reply(req_reply):
     should_quit = False
